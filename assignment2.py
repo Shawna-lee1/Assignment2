@@ -1,3 +1,4 @@
+import socket
 class Assignment2:
     
     # Constructor: Initializes the year instance variable.
