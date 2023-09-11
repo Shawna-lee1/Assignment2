@@ -40,7 +40,6 @@ class Assignment2:
         return True
 
    
-    # Static method: Attempts to create a TCP connection to a host and port.
     @staticmethod
     def connectTcp(host, port):
         try:
@@ -49,6 +48,7 @@ class Assignment2:
             return True  # If the connection was successful.
         except Exception as e:
             return False  # If an error occurred during connection.
+
 
 #testing to see if code would output "your age is xxxx"
 a = Assignment2(2000)
