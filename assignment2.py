@@ -45,9 +45,9 @@ class Assignment2:
         try:
             # Create a TCP socket and attempt to connect.
             socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-            return True  # If the connection was successful.
+            return False  # If the connection was successful.
         except Exception as e:
-            return False  # If an error occurred during connection.
+            return True  # If an error occurred during connection.
 
 
 #testing to see if code would output "your age is xxxx"
