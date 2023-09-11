@@ -44,11 +44,15 @@ class Assignment2:
     @staticmethod
     def connectTcp(host, port):
         try:
-            # Create a TCP socket and attempt to connect.
-            socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-            return False  # If the connection was successful.
+            # Create a TCP IPv4 socket
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            # Attempt to connect to the specified host and port
+            s.connect((host, port))
+            # Close the connection
+            s.close()
+            return True  # If the connection was successful.
         except Exception as e:
-            return True  # If an error occurred during connection.
+            return False  # If an error occurred during the connection attempt.
 
 
 #testing to see if code would output "your age is xxxx"
