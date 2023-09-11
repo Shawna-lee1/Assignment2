@@ -22,11 +22,10 @@ class Assignment2:
     
     # Method: Modify the year as per the given specification and return the result as a string.
     def modifyYear(self, n):
-        year_str = str(self.year)
-        result = year_str[:2] * n  # Repeats the first two characters of the year n times.
-        odd_chars = year_str[::2]  # Selects odd-positioned characters of the year.
-        result += odd_chars * n  # Repeats the odd-positioned characters n times.
-        return result
+        res = str(self.year)[:2] * n # Repeating the first two characters of the year n times
+        t = self.year * n # Multiplying year by n 
+        res = res + str(t)[::2] # Extracting odd index digits and combining the string
+        return res
     
     # Static method: Checks if a string meets certain requirements.
     @staticmethod
