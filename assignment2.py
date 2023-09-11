@@ -8,7 +8,7 @@ class Assignment2:
     # Method: Calculate and print the age based on the supplied currentYear argument.
     def tellAge(self,currentYear):
         age = currentYear - self.year
-        print(age)
+        print("Your age is", age)
 
     # Method: Calculate and return a list of 10-year anniversaries.
     def listAnniversaries(self):
